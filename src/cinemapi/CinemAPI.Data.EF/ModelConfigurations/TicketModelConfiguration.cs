@@ -11,11 +11,11 @@ namespace CinemAPI.Data.EF.ModelConfigurations
     {
         public void Configure(DbModelBuilder modelBuilder)
         {
-            EntityTypeConfiguration<Ticket> ReservationModel = modelBuilder.Entity<Ticket>();
-            ReservationModel.HasKey(model => model.Id);
-            ReservationModel.Property(model => model.ProjectionId).IsRequired();
-            ReservationModel.Property(model => model.Row).IsRequired();
-            ReservationModel.Property(model => model.Column).IsRequired();
+            EntityTypeConfiguration<Ticket> TicketModel = modelBuilder.Entity<Ticket>();
+            TicketModel.HasKey(model => model.Id);
+            TicketModel.Property(model => model.ProjectionId).IsRequired();
+            TicketModel.Property(model => model.Row).IsRequired();
+            TicketModel.Property(model => model.Column).IsRequired();
         }
     }
 }
